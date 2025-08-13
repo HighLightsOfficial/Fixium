@@ -146,7 +146,6 @@ FGM is a web-based tool that renders `.fxm` snapshot files into interactive char
 - 🔍 [Fixium Graphic Maker (FGM)](https://highlightsofficial.github.io/FGM/)  
 - 💻 [HighLights GitHub Organization](https://github.com/orgs/HighLightsOfficial)  
 - 🎥 [HighLights on YouTube](https://youtube.com/@highlightscompany?feature=shared)  
-- 💬 [Join the Official Discord](https://discord.gg/k7Vt3UNBPj)  
 
 ---
 
