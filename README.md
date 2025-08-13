@@ -59,18 +59,25 @@ Detects inactive, disabled, or memory-heavy plugins and alerts console + online 
 ### 🔟 BlockLightUpdater  
 Updates block light for stale chunks to prevent visual glitches and lighting-related lag.
 
-### 1️⃣1️⃣ ChunkThrottle *(New)*  
+### 1️⃣1️⃣ ChunkThrottle
 Intelligently limits the number of active chunks per world based on player presence:
 - Worlds with players use a high chunk limit (e.g., 300).
 - Worlds without players use a low chunk limit (e.g., 75).
 - Unloads distant chunks to maintain limits.
 - Configurable with blacklist support to exclude specific worlds.
 
-### 1️⃣2️⃣ LightUpdateLimiter *(New)*  
+### 1️⃣2️⃣ LightUpdateLimiter
 Controls the number of light updates to avoid server overload:
 - Cancels light update events if a set limit is exceeded.
 - Resets counters each tick with a scheduled task.
 - Prevents lag caused by explosions, redstone, or complex circuits.
+
+### 1️⃣3️⃣ LagCommandQueue *(New)*  
+Queues commands from players or console if server TPS is low, preventing sudden lag spikes.  
+- Monitors TPS and throttles command execution.
+- Logs queued commands as warnings.
+- Executes queued commands automatically when server load stabilizes.
+- Sends messages to players about queuing and execution.
 
 ---
 
@@ -104,7 +111,7 @@ Manual plugin reload interface:
 
 Used with **PluginRestarter** alerts for stability management.
 
-### `/dserver` *(New)*  
+### `/dserver`
 Displays advanced server diagnostics including:  
 - Server name, PMMP version, codename  
 - MCPE and API versions  
@@ -153,7 +160,7 @@ Join us on Discord or submit an issue or pull request on GitHub.
 ## 🧪 Debug Info
 
 - Plugin Name: `Fixium`  
-- Version: `0.0.1-beta.0.4` (pre-release)  
+- Version: `0.0.1-beta.0.5.pre-release`  
 - PHP Compatibility: **PocketMine-MP 1.0.0 API** (MCPE 0.15.10)  
 - Required Folders:  
   - `snapshots/`: stores `.fxm` snapshot files  
@@ -170,5 +177,6 @@ This project is licensed under the **MIT License**.
 
 ---
 
-> *“Great software is born from small optimizations done consistently.”*  
-> — HighLights
+> *"Someone who seeks perfection may feel that it is never enough."*
+>  
+> — mateocollar_
